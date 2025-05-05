@@ -7,85 +7,286 @@
 */
 
 /* WHOLE PAGE CSS */
-
-.container{width: 900px; margin: 0 auto;font-family: 'Josefin Slab', serif;}
-p{font-size: 20px;}
-
-/* ***** HEADING WITH NAME AND CIS 131-W02 ***** */
-.name{
+.container {
+	margin: 0 auto;
+	max-width: 900px;
+	width: 100%;
+	font-family: 'Josefin Slab', serif;
+  }
+  
+  p {
+	font-size: 20px;
+  }
+  
+  /* ***** HEADING WITH NAME AND CIS 131-W02 ***** */
+  .name {
 	color: #404040;
 	font-size: 85px;
 	font-family: 'Cabin Sketch', cursive;
 	border-bottom: 2px solid black;
 	padding-bottom: 20px;
-	}
-
-header{text-align: center; font-size: 30px;}
-header p{margin: 10px;}
-
-
-/* ***** NAVIGATION ***** */
-nav{width:100%; padding: 20px; margin-top: 50px; margin: auto;text-align: center;
-}
-
-nav a{
+  }
+  
+  header {
+	text-align: center;
+	font-size: 30px;
+  }
+  
+  header p {
+	margin: 10px;
+  }
+  
+  /* ***** NAVIGATION ***** */
+  
+  nav {
+	width: 100%;
+	margin: 50px auto 0;
+	padding: 20px;
+  }
+  
+  nav ul {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	flex-wrap: wrap;
+  }
+  
+  nav li {
+	display: block;
+  }
+  
+  nav a {
 	font-size: 20px;
 	background-color: #404040;
-	text-decoration:none;
-	padding: 20px;
 	color: #fff9cc;
-	margin-right: 15px;
-
-}
-nav li{display: inline-block; }
-a:hover{
-	transition-duration: .35s;
-	box-shadow: 10px 10px 5px black;
-	font-weight: bold;
-	}
-
-/* nav.newLine{padding-left: 70px; margin-top: 30px;} */
-
-.heading{text-align: center; margin-top: 75px; font-size: 25px;}
-
-/* ***** FOOTER ***** */
-footer p{
+	text-decoration: none;
+	padding: 20px;
+	display: block;
+  }
+  /* nav for sections */
+  .section-nav {
+	margin: 10px auto;
 	text-align: center;
- 	width: 900px;
+  }
+  
+  .section-nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	flex-wrap: wrap;
+  }
+  span {display:block}
+  .section-nav li , span a{
+	display: inline-block;
+  }
+  
+  .section-nav a, span a{
+	font-size: 16px;
+	text-decoration: none;
+	background-color: #ddd;
+	color: #333;
+	padding: 10px 15px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .section-nav a:hover{
+	background-color: #aaa;
+	color: white;
+  }
+  a:hover, span a:hover {
+	transition-duration: 0.35s;
+	box-shadow: 2px 2px 4px black;
+	font-weight: bold;
+  }
+
+	
+  
+  
+  /* ***** SECTION HEADINGS ***** */
+  .heading {
+	text-align: center;
+	margin-top: 5px;
+	font-size: 25px;
+  }
+  
+  /* ***** FOOTER ***** */
+  footer p {
+	text-align: center;
+	width: 100%;
 	margin: auto;
 	font-family: 'Josefin Slab', serif;
-	}
-footer{
-	clear:both;
+  }
+  
+  footer {
+	clear: both;
 	padding: 15px;
 	border-top: 2px solid black;
-	margin-top: 500px;
-}
-
-
-
-
-/* ***** index.html ***** */
-article p{
-	text-align: center;
-	margin-right: 60px;
-	float: right;
-	width: 400px;
-	font-size: 20px;
-
-}
-#headshot{
-	float: left;
+	margin-top: 100px;
+  }
+  
+  /* ***** HOMEPAGE ARTICLE (Flexbox) ***** */
+  .homepageArticle {
+	display: flex;
+	align-items: flex-start;
+	gap: 40px;
+	margin-top: 50px;
+	flex-wrap: wrap; /* Ensures wrapping if needed on small screens */
+  }
+  
+  #headshot {
 	width: 300px;
 	border: 5px solid #404040;
-	margin-left: 60px;
 	box-shadow: 5px 5px 10px black;
-}
-.greeting{
+	flex-shrink: 0;
+  }
+  
+  .home-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+	min-width: 0;
+  }
+  
+  .home-text .greeting {
 	color: #404040;
 	font-size: 50px;
 	font-family: 'Cabin Sketch', cursive;
-	margin-bottom: 0px;
-	padding-top: 35px;
-}
-.homepageArticle{margin-top: 50px; }
+	margin-bottom: 10px;
+	padding-top: 10px;
+  }
+  
+  .home-text p {
+	font-size: 20px;
+	text-align: left;
+  }
+  
+  /* ***** PERSONAL STORY SECTIONS (Grid) ***** */
+  .personal-story {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	align-items: center;
+	margin-bottom: 25px;
+  }
+  
+  /* Default: image left, text right */
+  .personal-story:nth-child(odd) {
+	grid-template-areas:
+	  "heading heading"
+	  "image text";
+  }
+  
+  /* Alternate: text left, image right */
+  .personal-story:nth-child(even) {
+	grid-template-areas:
+	  "heading heading"
+	  "text image";
+  }
+  
+  /* Assign grid areas to elements */
+  .personal-story .heading {
+	grid-area: heading;
+  }
+  
+  .personal-story .story-img {
+	grid-area: image;
+	width: 300px;
+	border: 5px solid #404040;
+	box-shadow: 5px 5px 10px black;
+	display: block;
+	margin: 5px auto;
+  }
+  
+  .personal-story p {
+	grid-area: text;
+	font-size: 20px;
+	text-align: center;
+	max-width: 700px;
+  }
+  
+  /* Optional Image */
+  .kid-img {
+	width: 200px;
+	border: 3px solid #404040;
+	margin-top: 15px;
+  }
+
+  .personal-story:not(:last-of-type)::after {
+	content: "";
+	display: block;
+	height: 2px;
+	background-color: #ccc;
+	margin: 40px 0 0 0;
+	grid-column: 1 / -1;
+  }
+
+  
+  
+  /* ***** MEDIA QUERIES FOR RESPONSIVE LAYOUT ***** */
+  @media (max-width: 768px) {
+	.homepageArticle {
+		flex-direction: column;
+		text-align: center;
+	  }
+	  #headshot {
+		margin: 0 auto;
+	  }
+	  
+	  .home-text {
+		align-items: center;
+	  }
+	  
+	  .home-text p {
+		text-align: center;
+	  }
+	/* Nav: stack vertically */
+	nav ul {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	nav li {
+	  margin-bottom: 10px;
+	}
+  
+	/* Homepage article: stack */
+	.homepageArticle {
+	  flex-direction: column;
+	  text-align: center;
+	}
+  
+	.home-text p {
+	  text-align: center;
+	}
+  
+	/* Personal story: stack all */
+	.personal-story,
+	.personal-story:nth-child(odd),
+	.personal-story:nth-child(even) {
+	  grid-template-columns: 1fr;
+	  grid-template-areas:
+		"heading"
+		"image"
+		"text";
+	  text-align: center;
+	}
+  
+	.personal-story .story-img {
+	  width: 100%;
+	  max-width: 300px;
+	  margin: 0 auto;
+	}
+  
+	.personal-story p {
+	  text-align: center;
+	}
+  }
+  

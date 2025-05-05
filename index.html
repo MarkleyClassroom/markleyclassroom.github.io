@@ -10,38 +10,87 @@
 				course.
 	-->
 	<title>Kirsten Markley</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 	<div class="container">
-		<header>
+		<header id="top">
 			<p class="name">Kirsten Markley</p>
 			<p>CIS 131
 			<p>
 		</header>
-		<nav>
+		<nav class="main-nav">
 			<ul>
-				<li>
-					<a href="index.html">Home</a>
-				</li>
-				<a href="schedule" target="_blank">Schedule</a></li>
-				<li>
-					<a href="company" target="_blank">About A Company</a>
-				</li>
-			
+				<li><a href="index.html">Home</a></li>
+				<li><a href="schedule" target="_blank">Schedule</a></li>
+				<li><a href="company" target="_blank">About A Company</a></li>
 			</ul>
 		</nav>
 		<article class="homepageArticle">
-			<img src="qutiingtime.jpg" alt="headshot" id="headshot">
-			<p class="greeting">Hello!</p>
-			<p>My name is Kirsten Markley. I am the teacher of this course. Here is my homepage to give an example for
+			<img src="quittingtime.jpg" alt="headshot" id="headshot">
+			<div class="home-text">
+			  <p class="greeting">Hello!</p>
+			  <p>My name is Kirsten Markley. I am the teacher of this course. Here is my homepage to give an example for
 				the assignment.</p>
-		</article>
+			</div>
+		  </article>
+
+		  <nav class="section-nav">
+			<ul>
+			  <li><a href="#kailua">Kailua</a></li>
+			  <li><a href="#mainland">Mainland</a></li>
+			  <li><a href="#hawaii">Back to Hawaii</a></li>
+			  <li><a href="#missouri">Missouri</a></li>
+			</ul>
+		  </nav>
+		<div class="bio">
+			<section class="personal-story" id="kailua">
+				<h2 class="heading">Born & Raised in Hawaii - Kailua</h2>
+				<img src="https://ozarktechwebdev.com/syllabus/img/Kailua_Oahu.jpg" alt="Kailua Beach"
+					class="story-img">
+				<p>I grew up in a small town, on a small island. I attended a small private school. No wonder I am
+					small! I
+					spent a lot of time in the water, snorkeling or boogie boarding—or mostly hanging out on the beach
+					"catching a tan" or checking out the surfers.<span> <a href="#top">Back to Top <i class="fa-solid fa-arrow-up"></i></a></span></p>
+					
+			</section>
+			
+			<section class="personal-story" id="mainland">
+				<h2 class="heading">Seattle & Tucson - Mainland Bound</h2>
+				<img src="https://ozarktechwebdev.com/syllabus/img/uofa.jpg" alt="University of Arizona"
+					class="story-img">
+				<p>I moved to the mainland to go to school. I got an AA degree in CS and a BS Degree (really) in CIS. I
+					worked for AGS Solutions who contracted me out for programming projects with companies like Burr
+					Brown
+					(now Texas Instruments) and Otis Elevator.<span> <a href="#top">Back to Top <i class="fa-solid fa-arrow-up"></i></a></span></p>
+			</section>
+			
+			<section class="personal-story" id="hawaii">
+				<h2 class="heading">The Islands Called Me Home - Back to Hawaii</h2>
+				<img src="https://ozarktechwebdev.com/syllabus/img/divingstuff.jpg" alt="Scuba Diving"
+					class="story-img">
+				<p>
+					I missed home, so I went back and taught scuba diving for 10 years while building websites to pay
+					the
+					bills—and raise the best kid on the planet!<span> <a href="#top">Back to Top <i class="fa-solid fa-arrow-up"></i></a></span>
+				</p>
+			</section>
+			
+			<section class="personal-story" id="missouri">
+				<h2 class="heading">Enough of Paradise - Move to Missouri</h2>
+				<img src="https://ozarktechwebdev.com/syllabus/img/otcExp.jpg" alt="Life in Missouri" class="story-img">
+				<p>Husband, 2 dogs, and a horse boarded a plane (yes, the horse too)<span> <a href="#top">Back to Top <i class="fa-solid fa-arrow-up"></i></a></span>
+				</p>
+			</section>
+		</div>
+
 		<footer>
-			<p>Web Development 130. All Rights Reserved.Kirsten Markley 2023&#169;</p>
+			<p>Web Development 130. All Rights Reserved.Kirsten Markley 2025&#169;</p>
 		</footer>
 	</div>
 </body>
